@@ -60,6 +60,6 @@ class Testcreate(TestBase):
         response = self.client.post(
             url_for("create_task"),
             json={"description":"Add a new task"},
-            follow_redirects=True
+            follow_redirects=True  
         )
         self.assertIn("Add a new task", str(response.data))
